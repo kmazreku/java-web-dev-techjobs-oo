@@ -46,8 +46,69 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        if(name=="" && employer.getValue()==null && location.getValue()==null && positionType.getValue()==null && coreCompetency.getValue()==null){
+            return "OOPS! This job does not seem to exist.";
+        }
+        if(name==""){
+            return "\n" +
+                    "ID: " + id +
+                    "\nName: Data not available"+
+                    "\nEmployer: " + employer +
+                    "\nLocation: " + location +
+                    "\nPosition Type: " + positionType +
+                    "\nCore Competency: " + coreCompetency +
+                    '\n';
+        }else if(employer.getValue()==null){
+            return "\n" +
+                    "ID: " + id +
+                    "\nName: " + name +
+                    "\nEmployer: Data not available" +
+                    "\nLocation: " + location +
+                    "\nPosition Type: " + positionType +
+                    "\nCore Competency: " + coreCompetency +
+                    '\n';
+        }else if(location.getValue()==null){
+            return "\n" +
+                    "ID: " + id +
+                    "\nName: " + name +
+                    "\nEmployer: " + employer +
+                    "\nLocation: Data not available" +
+                    "\nPosition Type: " + positionType +
+                    "\nCore Competency: " + coreCompetency +
+                    '\n';
+        } else if(positionType.getValue()==null){
+            return "\n" +
+                    "ID: " + id +
+                    "\nName: " + name +
+                    "\nEmployer: " + employer +
+                    "\nLocation:" + location +
+                    "\nPosition Type: Data not available" +
+                    "\nCore Competency:" + coreCompetency +
+                    '\n';
+        }else if(coreCompetency.getValue()==null){
+            return "\n" +
+                    "ID: " + id +
+                    "\nName: " + name +
+                    "\nEmployer: " + employer +
+                    "\nLocation: " + location +
+                    "\nPosition Type: " + positionType +
+                    "\nCore Competency: Data not available" +
+                    '\n';
+        } else {
+            return "\n" +
+                    "ID: " + id +
+                    "\nName: " + name +
+                    "\nEmployer: " + employer +
+                    "\nLocation: " + location +
+                    "\nPosition Type: " + positionType +
+                    "\nCore Competency: " + coreCompetency +
+                    '\n';
+        }
 
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
+    }
+// TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
     public int getId() {
