@@ -60,7 +60,7 @@ public class Job {
                     "\nPosition Type: " + positionType +
                     "\nCore Competency: " + coreCompetency +
                     '\n';
-        }else if(employer.getValue()==null){
+        }else if(employer.getValue()==null || employer.getValue()==""){
             return "\n" +
                     "ID: " + id +
                     "\nName: " + name +
@@ -69,7 +69,7 @@ public class Job {
                     "\nPosition Type: " + positionType +
                     "\nCore Competency: " + coreCompetency +
                     '\n';
-        }else if(location.getValue()==null){
+        }else if(location.getValue()==null || location.getValue()==""){
             return "\n" +
                     "ID: " + id +
                     "\nName: " + name +
@@ -78,7 +78,7 @@ public class Job {
                     "\nPosition Type: " + positionType +
                     "\nCore Competency: " + coreCompetency +
                     '\n';
-        } else if(positionType.getValue()==null){
+        } else if(positionType.getValue()==null || positionType.getValue()==""){
             return "\n" +
                     "ID: " + id +
                     "\nName: " + name +
@@ -87,7 +87,7 @@ public class Job {
                     "\nPosition Type: Data not available" +
                     "\nCore Competency:" + coreCompetency +
                     '\n';
-        }else if(coreCompetency.getValue()==null){
+        }else if(coreCompetency.getValue()==null || coreCompetency.getValue()==""){
             return "\n" +
                     "ID: " + id +
                     "\nName: " + name +
